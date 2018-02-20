@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jeeves.peepl.Activities.MainActivity">
+
+    <!--Top title bar that says Peepl-->
+    <LinearLayout
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:background="#65A0AC">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/peepl_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:shadowColor="@color/colorAccent"
+                android:text="@string/app_name"
+                android:textAppearance="@android:style/TextAppearance.Theme.Dialog"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:visibility="visible"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="0dp"/>
+
+            <ImageView
+                android:id="@+id/beef"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/beef"
+                android:scaleType="fitStart"
+                android:adjustViewBounds="true"
+                android:maxHeight="20dp"
+                android:maxWidth="15dp"
+                android:layout_marginTop="3dp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/black_line"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_height="1dp"
+            android:layout_below="@+id/connect_help"
+            android:layout_weight="0"
+            android:background="#313637"
+            android:gravity="center_horizontal"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <!--App welcome and short description of how to utilize Peepl-->
+    <LinearLayout
+        android:id="@+id/app_description"
+        android:layout_width="fill_parent"
+        android:layout_height="329dp"
+        android:orientation="vertical"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar"
+        android:layout_marginTop="80dp">
+
+0        <TextView
+            android:id="@+id/peepl_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:gravity="center"
+            android:text="Welcome to Peepl!"
+            android:textSize="25dp"
+            tools:text="Welcome to Peepl!" />
+
+        <TextView
+            android:id="@+id/peepl_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="Tap the magnifying glass to start searching!"
+            tools:text="Tap the magnifying glass to start searching!" />
+
+    </LinearLayout>
+
+    <!--Navigation buttons at the bottom of the screen-->
+    <LinearLayout
+        android:id="@+id/button_list_outer"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|bottom">
+
+        <LinearLayout
+            android:id="@+id/button_list_inner"
+            android:layout_width="fill_parent"
+            android:layout_height="41dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintTop_toBottomOf="@+id/app_description"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="491dp">
+
+            <ImageButton
+                android:id="@+id/home_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/home"
+                android:layout_weight="1"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="519dp" />
+
+            <ImageButton
+                android:id="@+id/search_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/search"
+                tools:layout_editor_absoluteX="191dp"
+                tools:layout_editor_absoluteY="519dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
